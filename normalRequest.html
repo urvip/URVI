@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Normal Permit Request</title>
+		<title>Normal booking - Atmiya College Parking</title>
 		<link rel="stylesheet" type="text/css" href="styles/css.css" />
 	</head>
-
-	<body>
-
+	<header>
 		<div id="header">
-			<div class="logo"><a href="test.html">Parking<span>Permit</span></a></div>
+			<div class="logo"><a href="homepage.html">
+				<img src="images/logo.png" width=60px height=60px/>Atmiya<span>College</span>
+			</a></div>
 		</div>
 
 		<nav class="navClass">
 			<ul>
-				<li><a href="normalRequest.html">Normal Request</a></li>
-				<li><a href="Tos.html">Premium Request</a></li>
-				<li>Payment
+				<li><a href="homepage.html"><font color="white">Home</font></a></li>
+				<li><a href="normalRequest.html"><font color="white">Normal Request</font></a></li>
+				<li><a href="ToS.html"><font color="white">Premium Request</font></a></li>
+				<li><font color="white">Payment</font>
 					<ul class="sub-menu">
-						<li><a href="Tos.html">Booking</a></li>
-						<li><a href="fines.html">Fines</a></li>
+						<li><a href="Tos.html"><font color="white">Booking</font></a></li>
+						<li><a href="payfines.html"><font color="white">Fines</font></a></li>
 					</ul>
 				</li>
-				<li><a href="report.html">Report</a></li>
-				<li><a href="Tos.html">ToS</a></li>
-				<li><a href="Tos.html">Contact Us</a></li>
+				<li><a href="report.html"><font color="white">Report</font></a></li>
+				<li><a href="Tos.html"><font color="white">ToS</font></a></li>
+				<li><a href="Tos.html"><font color="white">Contact Us</font></a></li>
 			</ul>
 		</nav>
+			<!-- <div id="slide">
+				<img src="carpark.jpg" id="slideshow" />
+				<br/>
+
+				<div id="caption">
+					caption for slide
+				</div>
+
+				<a href="#" onclick="changeImage(-1); return false;">Previous Slide</a> <br/>
+				<a href="#" onclick="changeImage(1); return false;">Next Slide</a>
+			</div> -->
+
+	</header>
+	<body>
 
 		<!--
 			first name
@@ -42,65 +57,60 @@
 
 			button for submit
 		-->
-		<form name="Request">
-			First Name: <input type="text" name="firstname">
-			<br>Last Name: <input type="text" name="lastname">
-			<br>Date Of Birth: <input type="text" name="dob">
-			<br>E-mail Address: <input type="text" name="eaddress">
-			<br>Address: <br><textarea name="address" cols=40 rows=8></textarea>
+		<div id="wrap">
+			<form name="Request">
+				First Name: <input type="text" name="firstname">
+				<br>Last Name: <input type="text" name="lastname">
+				<br>Date Of Birth: <input type="text" name="dob">
+				<br>E-mail Address: <input type="text" name="eaddress">
+				<br>Address: <br><textarea name="address" cols=40 rows=8></textarea>
 
-			<br>Option to pick up permit: <select name="pickup">
-											<option> Dilever
-											<option> E-mail
-											<option> SMS
-										</select>
-			<br>Vehicle Type: <input type="radio" name="vtype" value="2wheel"> 2 Wheel
-			<input type="radio" name="vtype" value="4wheel"> 4 Wheel
-			<br>Vehicle Registration Information: <input type="text" name="VRinfo">
+				<br>Option to pick up permit: <select name="pickup">
+												<option> Dilever
+												<option> E-mail
+												<option> SMS
+											</select>
+				<br>Vehicle Type: <input type="radio" name="vtype" value="2wheel"> 2 Wheel
+				<input type="radio" name="vtype" value="4wheel"> 4 Wheel
+				<br>Vehicle Registration Information: <input type="text" name="VRinfo">
 
-			<br>ToS Aggrement: <input type="checkbox" name="tosaggrement"> I Agree
-			<br>
-			<input type="submit" value="Submit Request">
-			<input type="reset" value="Clear Form">
+				<br>ToS Aggrement: <input type="checkbox" name="tosaggrement"> I Agree
+				<br>
+				<input type="submit" value="Submit Request">
+				<input type="reset" value="Clear Form">
 
-		</form>
+			</form>
 
-
-	</body>
-
-	<footer>
+		</div>
+		<!-- below is the footer -->
 		<div id="base">
-			<div class="qlink">
-				<ul>
-					<li>
-						Quick Links
-						<ul class="sub-link1">
-							<li>Home</li>
-							<li>Normal</li>
-							<li>Premium</li>
-							<li>Payment</li>
-						</ul>
-					</li>
-					<li>
-						Supports
-						<ul class="sub-link2">
-							<li>ToS</li>
-							<li>Contact Us</li>
-							<li>About Us</li>
-						</ul>
-					</li>
-					<li>
-						Staff Only
-						<ul class="sub-link3">
-							<li>OHS only</li>
-							<li>Report</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+			<table class="qlink" width=50%>
+				<tr align="left">
+					<th>Quick Links</th>
+					<th>Supports</th>
+					<th>Staff Only</th>
+				</tr>
+				<tr>
+					<td><ul class="sub-link1">
+						<li>Home</li>
+						<li>Normal</li>
+						<li>Premium</li>
+						<li>Payment</li>
+					</ul></td>
+					<td><ul class="sub-link2">
+						<li>ToS</li>
+						<li>Contact Us</li>
+						<li>About Us</li>
+					</ul></td>
+					<td><ul class="sub-link3">
+						<li>OHS only</li>
+						<li>Report</li>
+					</ul><td>
+				</tr>
+			</table>
 			<div class="cpright">
 				<p>&copy; 2016 Copyright. All Rights Reserved</p>
 			</div>
 		</div>
-	</footer>
+	</body>
 </html>

@@ -1,31 +1,45 @@
 <html>
-  <head>
-    <title>Fines</title>
-    <link rel="stylesheet" type="text/css" href="styles/css.css" />
-    <style>
-      #wrap {margin:0 auto; width:80%; padding-top: 1%;}
-    </style>
-  </head>
-  <body>
-    <div id="header">
-			<div class="logo"><a href="test.html">Parking<span>Permit</span></a></div>
+	<head>
+		<title>Report - Atmiya College Parking</title>
+		<link rel="stylesheet" type="text/css" href="styles/css.css" />
+	</head>
+	<header>
+		<div id="header">
+			<div class="logo"><a href="homepage.html">
+				<img src="images/logo.png" width=60px height=60px/>Atmiya<span>College</span>
+			</a></div>
 		</div>
 
 		<nav class="navClass">
 			<ul>
-				<li><a href="normalRequest.html">Normal Request</a></li>
-				<li><a href="Tos.html">Premium Request</a></li>
-				<li>Payment
+				<li><a href="homepage.html"><font color="white">Home</font></a></li>
+				<li><a href="normalRequest.html"><font color="white">Normal Request</font></a></li>
+				<li><a href="ToS.html"><font color="white">Premium Request</font></a></li>
+				<li><font color="white">Payment</font>
 					<ul class="sub-menu">
-						<li><a href="Tos.html">Booking</a></li>
-						<li><a href="payfines.html">Fines</a></li>
+						<li><a href="Tos.html"><font color="white">Booking</font></a></li>
+						<li><a href="payfines.html"><font color="white">Fines</font></a></li>
 					</ul>
 				</li>
-				<li><a href="report.html">Report</a></li>
-				<li><a href="Tos.html">ToS</a></li>
-				<li><a href="Tos.html">Contact Us</a></li>
+				<li><a href="report.html"><font color="white">Report</font></a></li>
+				<li><a href="Tos.html"><font color="white">ToS</font></a></li>
+				<li><a href="Tos.html"><font color="white">Contact Us</font></a></li>
 			</ul>
 		</nav>
+			<!-- <div id="slide">
+				<img src="carpark.jpg" id="slideshow" />
+				<br/>
+
+				<div id="caption">
+					caption for slide
+				</div>
+
+				<a href="#" onclick="changeImage(-1); return false;">Previous Slide</a> <br/>
+				<a href="#" onclick="changeImage(1); return false;">Next Slide</a>
+			</div> -->
+
+	</header>
+  <body>
     <div id="wrap" align="center">
       <h3 align="center">Report an incident</h3><br/>
       <table id="tbReport">
@@ -40,40 +54,36 @@
         </tr>
     </table>
     </div>
-  </body>
-  <footer>
+
+    <!-- below is the footer -->
 		<div id="base">
-			<div class="qlink">
-				<ul>
-					<li>
-						Quick Links
-						<ul class="sub-link1">
-							<li>Home</li>
-							<li>Normal</li>
-							<li>Premium</li>
-							<li>Payment</li>
-						</ul>
-					</li>
-					<li>
-						Supports
-						<ul class="sub-link2">
-							<li>ToS</li>
-							<li>Contact Us</li>
-							<li>About Us</li>
-						</ul>
-					</li>
-					<li>
-						Staff Only
-						<ul class="sub-link3">
-							<li>OHS only</li>
-							<li>Report</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+			<table class="qlink" width=50%>
+				<tr align="left">
+					<th>Quick Links</th>
+					<th>Supports</th>
+					<th>Staff Only</th>
+				</tr>
+				<tr>
+					<td><ul class="sub-link1">
+						<li>Home</li>
+						<li>Normal</li>
+						<li>Premium</li>
+						<li>Payment</li>
+					</ul></td>
+					<td><ul class="sub-link2">
+						<li>ToS</li>
+						<li>Contact Us</li>
+						<li>About Us</li>
+					</ul></td>
+					<td><ul class="sub-link3">
+						<li>OHS only</li>
+						<li>Report</li>
+					</ul><td>
+				</tr>
+			</table>
 			<div class="cpright">
 				<p>&copy; 2016 Copyright. All Rights Reserved</p>
 			</div>
 		</div>
-	</footer>
+  </body>
 </html>
