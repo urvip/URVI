@@ -5,7 +5,6 @@
 	box-sizing: border-box;
 }
 
-
 body{
 	front-family:'lucida grande', tahoma, verdana, arian, sans-serif;
 	background-color: #FFFFFF;
@@ -18,8 +17,9 @@ a{
 #header{
 	width: 100%;
 	height: 75px;
-	background-color: #4656B0;
+	background-color: #0072BB;
 	margin: 0 auto;
+	position:fixed;
 }
 
 .logo {
@@ -29,7 +29,7 @@ a{
 }
 
 .logo a {
-	font-size: 3em;
+	font-size: 2em;
 	color: #fff;
 }
 
@@ -38,11 +38,12 @@ a{
 }
 
 .navClass > ul {
-	background-color: #5E5D5D;
-	colour:#D8D8D8;
-	
-	font-size:20px;
+	background-color: #323232;
+	margin-top:75px;
+	font-size: 13.2px;
 	font-family: sans-serif;
+	width: 100%;
+	position:fixed;
 }
 
 .navClass > ul > li {
@@ -52,23 +53,22 @@ a{
 }
 
 .navClass > ul > li:hover{
-	background-color: #383838;
-	
+	background-color: #00528F;
 }
 
 ul.sub-menu{
 	position:absolute;
-	background-color:#383838;
+	background-color:#00528F;
 	list-style-type:none;
-	width:170px;
+	width:172px;
 	padding-left:0px;
-	margin-left:-25px;
+	margin-left:-60px;
 	padding-top:5px;
 	opacity:0;
 }
 
 ul.sub-menu li{
-	padding-left:25px;
+	padding-left:60px;
 	padding-top:5px;
 	padding-bottom:5px;
 }
@@ -78,11 +78,12 @@ ul.sub-menu li{
 }
 
 .qlink >ul {
-	
+
 	colour:#D8D8D8;
-	
-	font-size:20px;
+
+	font-size:13px;
 	font-family: sans-serif;
+	list-style: none;
 }
 
 .qlink >ul >li{
@@ -95,8 +96,8 @@ ul.sub-menu li{
 	text-align: center;
 	margin: 0;
 	padding: 0;
-	line-height: 70px;
-	colour: #fff;
+	line-height: 20px;
+	background-color: #323232
 }
 
 .slide {
@@ -105,20 +106,41 @@ ul.sub-menu li{
 	margin: 0 auto;
 }
 
-
 #base{
-	position:fixed;
+	position:relative;
+	padding-left: 10%;
 	width: 100%;
-	height: 170px;
-	background-color: #4656B0;
+	height: 100px;
+	background-color: #323232;
+	color: #D2D2D2;
 	margin: 0 auto;
 	bottom:0;
 }
 
-#navigation{
-	width: 100%;
-	height: 50px;
-	border: 3xp solid #e3e3e3;
-	margin-top: 5ps;
-	
+#wrap {
+	width:800px;
+	margin:0 auto;
+	height: 650px;
+	background-color: red;
+}
+
+#slide {
+	width:800px;
+	margin: 0 auto;
+	height: 500px;
+	background-color: green;
+}
+
+#weatherfc {
+	width:390px;
+	height: 150px;
+	float:left;
+	background-color: blue;
+}
+
+#vacancies {
+	width:390px;
+	height: 150px;
+	float:right;
+	background-color: yellow;
 }
