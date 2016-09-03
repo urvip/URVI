@@ -100,11 +100,11 @@ ul.sub-menu li{
 	background-color: #323232
 }
 
-.slide {
+/*.slide {
 	width: 100%;
 	height: 250px;
 	margin: 0 auto;
-}
+}*/
 
 #base{
 	position:relative;
@@ -121,14 +121,13 @@ ul.sub-menu li{
 	width:800px;
 	margin:0 auto;
 	height: 650px;
-	background-color: red;
+	background-color: #E6E6E6;
 }
 
 #slide {
 	width:800px;
 	margin: 0 auto;
 	height: 500px;
-	background-color: green;
 }
 
 #weatherfc {
