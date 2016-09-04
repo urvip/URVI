@@ -1,17 +1,13 @@
 <html>
 	<head>
-		<title>Report - Atmiya College Parking</title>
-		<link rel="stylesheet" type="text/css" href="styles/css.css"/>
-		<style>
-			#pic1 {border-radius: 15px;} #pic2 {border-radius: 15px;} #pic3 {border-radius: 15px;}
-			p {text-decoration: none;}
-		</style>
+		<title>Smoking Incident - Atmiya College Parking</title>
+		<link rel="stylesheet" type="text/css" href="styles/css.css" />
 	</head>
 	<header>
 		<div id="header">
 			<div class="logo"><a href="homepage.html">
-				<img src="images/logo.png" width=60px height=60px/>Atmiya<span>College</span>
-			</a></div>
+				<img src="images/logo.png" width=60px height=60px/>Atmiya<span>College</span></a>
+			</div>
 		</div>
 
 		<nav class="navClass">
@@ -45,27 +41,21 @@
 	</header>
   <body>
     <div id="wrap">
-			<h2 align="center">Report an incident</h2><br>
-			<p align="center">Press accordingly to the pictures to report an incident</p><br><br>
-      <table id="tbReport" style=padding-left:12%>
-        <tr>
-          <td align="center"><a href="reportSmoking.html">
-						<img id="pic1" src="images/cigies.jpg" width=150px height=150px/>
-						<p><font color="#0072BB"> Report a smoking incident</font></p>
-					</a></td>
-          <td width=45%></td>
-          <td align="center"><a href="reportParking.html">
-						<img id="pic2" src="images/parking.png" width=150px height=150px/>
-						<p><font color="#0072BB"> Report a parking incident</font></p>
-					</a></td>
-        </tr>
-        <tr>
-          <td colspan=3 align="center"><a href="reportOther.html"><br><br><br>
-						<img id="pic3" src="images/other.gif" width=150px height=150px/>
-						<p><font color="#0072BB"> Report an incident</font></p>
-					</a></td>
-        </tr>
-      </table>
+      <h2 align="center">Report a smoking incident</h2>
+      <hr/><br>
+      <form name="rptParking" align="center">
+        Citation ID: <input type="text" name="citationID">
+        <br>Supervisor full-name: <input type="text" name="officerID">
+        <br>Violator first name: <input type="text" name="firstName">
+        <br>Violator last name: <input type="text" name="lastName">
+        <br>Department violator belongs to:<br><input type="text" name="happenWhere">
+        <br>Date and Time: <input type="text" name="dateTime">
+
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear Form">
+
+      </form>
     </div>
 
     <!-- below is the footer -->
