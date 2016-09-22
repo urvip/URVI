@@ -4,7 +4,9 @@
 		<title>Atmiya College Parking Homepage</title>
 		<link rel="stylesheet" type="text/css" href="styles/css.css" />
 	</head>
-	<header>
+
+
+	<body>
 		<div id="header">
 			<div class="logo"><a href="homepage.html">
 				<img src="images/logo.png" width=60px height=60px/>Atmiya<span>College</span>
@@ -15,7 +17,7 @@
 			<ul>
 				<li><a href="homepage.html"><font color="white">Home</font></a></li>
 				<li><a href="normalRequest.html"><font color="white">Normal Request</font></a></li>
-				<li><a href="ToS.html"><font color="white">Premium Request</font></a></li>
+				<li><a href="premiumRequest.html"><font color="white">Premium Request</font></a></li>
 				<li><font color="white">Payment</font>
 					<ul class="sub-menu">
 						<li><a href="Tos.html"><font color="white">Booking</font></a></li>
@@ -39,52 +41,95 @@
 				<a href="#" onclick="changeImage(1); return false;">Next Slide</a>
 			</div> -->
 
-	</header>
 
-	<body>
 		<!-- below is main contents in <body> -->
 		<div id="wrap">
-			<h2 align="center">Welcome to Atmiya College Official Parking Page</h2>
-			<div id="slide">
-				<!-- <img src="images/parking3.jpg" width=800px height=500/> -->
-			</div>
-			<div id="weatherfc">
-				<p>weather goes here</p>
-			</div>
-			<div id="vacancies">
-				<p>vacancies goes here</p>
-			</div>
-		</div>
+			<h2 align="center"><font size="8">Welcome to Atmiya College Official Parking </font></h2>
 
-		<!-- below is the footer -->
-		<div id="base">
-			<table class="qlink" width=50%>
-				<tr align="left">
-					<th>Quick Links</th>
-					<th>Supports</th>
-					<th>Staff Only</th>
-				</tr>
-				<tr>
-					<td><ul class="sub-link1">
-						<li>Home</li>
-						<li>Normal</li>
-						<li>Premium</li>
-						<li>Payment</li>
-					</ul></td>
-					<td><ul class="sub-link2">
-						<li>ToS</li>
-						<li>Contact Us</li>
-						<li>About Us</li>
-					</ul></td>
-					<td><ul class="sub-link3">
-						<li>OHS only</li>
-						<li>Report</li>
-					</ul><td>
-				</tr>
-			</table>
-			<div class="cpright">
-				<p>&copy; 2016 Copyright. All Rights Reserved</p>
+			<!--<div id="slide">-->
+
+			<div class="slideshow-container">
+				<div class="slides fade">
+
+					<img src="images/img1.jpg" style="width:100%","height:80%">
+				</div>
+
+				<div class="slides fade">
+					<img src="images/img2.jpg" style="width:100%","height:80%">
+				</div>
+
+				<div class="slides fade">
+					<img src="images/img3.jpg" style="width:100%","height:80%">
+				</div>
+
+				<a class="back" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="go" onclick="plusSlides(1)">&#10095;</a>
+
 			</div>
+
+				<div style="text-align:center">
+					<span class="select" onclick="currentSlide(1)"></span>
+					<span class="select" onclick="currentSlide(2)"></span>
+					<span class="select" onclick="currentSlide(3)"></span>
+
+				</div>
+			<script src="javascripts/slideshow.js"></script>
+
+			<br>
+
+			<div id="weatherfc" >
+				<p style="color:#0E4DA5"><font size="6">Weather For This Few Days</font></p>
+				<div id="cont_0698fa0d04b87375fff48dc38ede4ecd">
+					<script type="text/javascript" async src="https://www.theweather.com/wid_loader/0698fa0d04b87375fff48dc38ede4ecd"></script>
+				</div>
+			</div>
+
+			</br></br></br></br></br></br></br>
+			<div>
+			<br>
+			<br>
+			<br>
+			<br>
+			</div>
+
+			<div id="vacancies">
+				<p style="color:#270EA5"><font size="6">Vacancies For The CarPark</font></p>
+				<img src="images/vacancies.jpg" style="width:100%">
+			</div>
+			<!--
+			-->
 		</div>
-	</body>
-</html>
+			<br>
+
+			<!-- below is the footer -->
+			<div id="base">
+				<table class="qlink" width=50%>
+					<tr align="left">
+						<th>Quick Links</th>
+						<th>Supports</th>
+						<th>Staff Only</th>
+					</tr>
+					<tr>
+						<td><ul class="sub-link1">
+							<li>Home</li>
+							<li>Normal</li>
+							<li>Premium</li>
+							<li>Payment</li>
+						</ul></td>
+						<td><ul class="sub-link2">
+							<li>ToS</li>
+							<li>Contact Us</li>
+							<li>About Us</li>
+						</ul></td>
+						<td><ul class="sub-link3">
+							<li><a href="auth.php">OHS only</a></li>
+							<li>Report</li>
+						</ul><td>
+					</tr>
+				</table>
+				<div class="cpright">
+					<p>&copy; 2016 Copyright. All Rights Reserved</p>
+				</div>
+			</div>
+	  </body>
+	</html>

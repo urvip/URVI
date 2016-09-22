@@ -30,30 +30,23 @@
 			</ul>
 		</nav>
     <div id="wrap">
-			<h2 align="center">Report an incident</h2><br>
-			<p align="center">Press accordingly to the pictures to report an incident</p><br><br>
-      <table id="tbReport" style=padding-left:12%>
+			<h2 align="center">Welcome to Management Page</h2><br>
+      <table id="tbGeneral" style=padding-left:15%>
         <tr>
-          <td align="center"><a href="reportSmoking.php">
-						<img id="pic1" src="images/cigies.jpg" width=150px height=150px/>
-						<p><font color="#0072BB"> Report a smoking incident</font></p>
+          <td align="center"><a href="reportDisplay.php">
+						<img id="pic1" src="images/report.png" width=150px height=150px/>
+						<p><font color="#0072BB">Reports</font></p>
 					</a></td>
           <td width=45%></td>
           <td align="center"><a href="reportParking.php">
 						<img id="pic2" src="images/parking.png" width=150px height=150px/>
-						<p><font color="#0072BB"> Report a parking incident</font></p>
-					</a></td>
-        </tr>
-        <tr>
-          <td colspan=3 align="center"><a href="reportOther.php"><br><br><br>
-						<img id="pic3" src="images/other.gif" width=150px height=150px/>
-						<p><font color="#0072BB"> Report an incident</font></p>
+						<p><font color="#0072BB">Booking requests</font></p>
 					</a></td>
         </tr>
       </table>
     </div>
 
-		<!-- below is the footer -->
+    <!-- below is the footer -->
 		<div id="base">
 			<table class="qlink" width=50%>
 				<tr align="left">

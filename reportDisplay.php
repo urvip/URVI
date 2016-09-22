@@ -30,30 +30,35 @@
 			</ul>
 		</nav>
     <div id="wrap">
-			<h2 align="center">Report an incident</h2><br>
-			<p align="center">Press accordingly to the pictures to report an incident</p><br><br>
-      <table id="tbReport" style=padding-left:12%>
-        <tr>
-          <td align="center"><a href="reportSmoking.php">
-						<img id="pic1" src="images/cigies.jpg" width=150px height=150px/>
-						<p><font color="#0072BB"> Report a smoking incident</font></p>
-					</a></td>
-          <td width=45%></td>
-          <td align="center"><a href="reportParking.php">
-						<img id="pic2" src="images/parking.png" width=150px height=150px/>
-						<p><font color="#0072BB"> Report a parking incident</font></p>
-					</a></td>
-        </tr>
-        <tr>
-          <td colspan=3 align="center"><a href="reportOther.php"><br><br><br>
-						<img id="pic3" src="images/other.gif" width=150px height=150px/>
-						<p><font color="#0072BB"> Report an incident</font></p>
-					</a></td>
-        </tr>
-      </table>
+			<h2 align="center">Welcome to Management Page</h2><br>
+      <?php
+
+        $dblink = mysql_connect("localhost", "root", "");
+
+        mysql_select_db("root299", $dblink);
+
+        $res = mysql_query("select citationID, citationType, officerID, firstname, lastname, description
+         from citation", $dblink);
+
+        echo "<table border=1 cellspacing=0 cellpadding=0>";
+        echo "<tr>";
+        echo "<th>CitationID</th><th>Citation Type</th><th>OfficerID</th><th>First Name</th><th>Last Name</th>
+          <th>Description</th>";
+        echo "</tr>";
+        while ($row = mysql_fetch_row($res)) {
+          echo "<tr>";
+          echo "<td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td><td>$row[4]</td><td>$row[5]</td>";
+          echo "</tr>";
+        }
+        echo "</table>";
+
+        mysql_close($dblink);
+
+       ?>
+
     </div>
 
-		<!-- below is the footer -->
+    <!-- below is the footer -->
 		<div id="base">
 			<table class="qlink" width=50%>
 				<tr align="left">

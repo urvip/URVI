@@ -1,22 +1,26 @@
-var images = ["carpark.jpg","parking1.jpg","parking2.jpg"];
+var slideIndex = 1;
+			showSlides(slideIndex);
 
+			function plusSlides(n) {
+			showSlides(slideIndex += n);
+			}
 
-var imageNumber =0;
-var imageLength = image.length - 1;
+			function currentSlide(n) {
+			showSlides(slideIndex = n);
+			}
 
-function changeImg(x){
-	imageNumber += x;
-	
-	if (imageNumber > imageLength){
-		imageNumber = 0;
-	}
-	
-	if (imageNumber < 0){
-		imageNumber = imageLength;
-	}
-	
-	document.getElementById("slideshow").src = images[imageNumber];
-	//document.getElementById("caption").innerHTML = caption[imageNumber];
-	
-	return fasle;
-}
+			function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("slides");
+			var dots = document.getElementsByClassName("select");
+			if (n > slides.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " active";
+			}

@@ -1,9 +1,12 @@
+<<!DOCTYPE html>
 <html>
 	<head>
-		<title>Other Incident - Atmiya College Parking</title>
+		<title>Atmiya College Parking Homepage</title>
 		<link rel="stylesheet" type="text/css" href="styles/css.css" />
 	</head>
-	<header>
+
+
+	<body>
 		<div id="header">
 			<div class="logo"><a href="homepage.html">
 				<img src="images/logo.png" width=60px height=60px/>Atmiya<span>College</span>
@@ -14,7 +17,7 @@
 			<ul>
 				<li><a href="homepage.html"><font color="white">Home</font></a></li>
 				<li><a href="normalRequest.html"><font color="white">Normal Request</font></a></li>
-				<li><a href="ToS.html"><font color="white">Premium Request</font></a></li>
+				<li><a href="premiumRequest.html"><font color="white">Premium Request</font></a></li>
 				<li><font color="white">Payment</font>
 					<ul class="sub-menu">
 						<li><a href="Tos.html"><font color="white">Booking</font></a></li>
@@ -26,37 +29,59 @@
 				<li><a href="Tos.html"><font color="white">Contact Us</font></a></li>
 			</ul>
 		</nav>
-			<!-- <div id="slide">
-				<img src="carpark.jpg" id="slideshow" />
-				<br/>
-
-				<div id="caption">
-					caption for slide
-				</div>
-
-				<a href="#" onclick="changeImage(-1); return false;">Previous Slide</a> <br/>
-				<a href="#" onclick="changeImage(1); return false;">Next Slide</a>
-			</div> -->
-
-	</header>
-  <body>
     <div id="wrap">
       <h2 align="center">Report an incident</h2>
       <hr/><br>
-      <form name="rptParking" align="center">
-        Citation ID: <input type="text" name="citationID">
-        <br>Permit ID: <input type="text" name="permitID">
+      <form name="rptParking" align="center" method=POST>
         <br>Officer ID: <input type="text" name="officerID">
-        <br>Violator first name: <input type="text" name="firstName">
-        <br>Violator last name: <input type="text" name="lastName">
+        <br>Violator first name: <input type="text" name="firstname">
+        <br>Violator last name: <input type="text" name="lastname">
         <br>Vehicle Registration: <input type="text" name="VRinfo">
-        <br>Date and Time: <input type="text" name="dateTime">
-        <br>Description: <br><textarea name="address" cols=40 rows=8></textarea>
+        <br>Date and Time: <input type="datetime-local" name="dateTime">
+        <br>Description: <br><textarea name="description" cols=40 rows=1></textarea>
         <br>
-        <input type="submit" value="Submit">
-        <input type="reset" value="Clear Form">
+        <input type="submit" value="Submit" name="btnSubmit">
+        <input type="reset" value="Clear Form" name="btnClear">
 
       </form>
+			<?php
+			if(isset($_POST['btnSubmit'])) {
+				$servername = "localhost";
+				$username = "root";
+				$password = "";
+				$dbname = "root299";
+
+				// Create connection
+				$conn = mysqli_connect($servername, $username, $password, $dbname);
+				// Check connection
+				if (!$conn) {
+				    die("Connection failed: " . mysqli_connect_error());
+				}
+
+				$citation = rand(10000, 99999);
+				$officer = $_POST['officerID'];
+				$fn = $_POST['firstname'];
+				$ln = $_POST['lastname'];
+				$vr = $_POST['VRinfo'];
+				$dtime = $_POST['dateTime'];
+				$des = $_POST['description'];
+
+				$sql= "INSERT INTO citation (citationID, citationType, officerID,firstname,lastname,
+					vehicleRego, amount, incidentTime, description)
+				VALUES ('$citation','other','$officer','$fn','$ln','$vr', '179', '$dtime','$des');";
+
+				if (isset($_POST['btnSubmit'], $sql)){
+				  echo "Your citation ID is $citation";
+				}
+
+				if (!mysqli_query($conn, $sql)) {
+				    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+				}
+
+				  mysqli_close($conn);
+			}
+
+			?>
     </div>
 
     <!-- below is the footer -->

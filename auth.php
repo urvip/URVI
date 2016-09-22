@@ -1,20 +1,23 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>Smoking Incident - Atmiya College Parking</title>
+		<title>Atmiya College Parking Homepage</title>
 		<link rel="stylesheet" type="text/css" href="styles/css.css" />
 	</head>
-	<header>
+
+
+	<body>
 		<div id="header">
 			<div class="logo"><a href="homepage.html">
-				<img src="images/logo.png" width=60px height=60px/>Atmiya<span>College</span></a>
-			</div>
+				<img src="images/logo.png" width=60px height=60px/>Atmiya<span>College</span>
+			</a></div>
 		</div>
 
 		<nav class="navClass">
 			<ul>
 				<li><a href="homepage.html"><font color="white">Home</font></a></li>
 				<li><a href="normalRequest.html"><font color="white">Normal Request</font></a></li>
-				<li><a href="ToS.html"><font color="white">Premium Request</font></a></li>
+				<li><a href="premiumRequest.html"><font color="white">Premium Request</font></a></li>
 				<li><font color="white">Payment</font>
 					<ul class="sub-menu">
 						<li><a href="Tos.html"><font color="white">Booking</font></a></li>
@@ -26,36 +29,23 @@
 				<li><a href="Tos.html"><font color="white">Contact Us</font></a></li>
 			</ul>
 		</nav>
-			<!-- <div id="slide">
-				<img src="carpark.jpg" id="slideshow" />
-				<br/>
-
-				<div id="caption">
-					caption for slide
-				</div>
-
-				<a href="#" onclick="changeImage(-1); return false;">Previous Slide</a> <br/>
-				<a href="#" onclick="changeImage(1); return false;">Next Slide</a>
-			</div> -->
-
-	</header>
-  <body>
     <div id="wrap">
-      <h2 align="center">Report a smoking incident</h2>
-      <hr/><br>
-      <form name="rptParking" align="center">
-        Citation ID: <input type="text" name="citationID">
-        <br>Supervisor full-name: <input type="text" name="officerID">
-        <br>Violator first name: <input type="text" name="firstName">
-        <br>Violator last name: <input type="text" name="lastName">
-        <br>Department violator belongs to:<br><input type="text" name="happenWhere">
-        <br>Date and Time: <input type="text" name="dateTime">
-
-        <br>
-        <input type="submit" value="Submit">
-        <input type="reset" value="Clear Form">
-
+			<h2 align="center">Warning</h2><br>
+      <p align="center">This page is strictly prohibited. Staff only!</p><br>
+      <p align="center">Please enter 6-digit number for authentication below</p><br>
+      <form name="auth" align="center" action="OHS.php">
+        Password: <input type="text" name="password">
+        <input type="submit" value="Submit" name="btnSubmit">
       </form>
+      <?php
+      $submit=$_POST['btnSubmit'];
+      $pass=$_POST['password'];
+      if(isset($submit)) {
+        while (!$pass=="123456" || $pass="") {
+          echo "Access denied";
+        }
+      }
+      ?>
     </div>
 
     <!-- below is the footer -->
@@ -79,7 +69,7 @@
 						<li>About Us</li>
 					</ul></td>
 					<td><ul class="sub-link3">
-						<li>OHS only</li>
+						<li><a href="auth.php">OHS only</a></li>
 						<li>Report</li>
 					</ul><td>
 				</tr>
