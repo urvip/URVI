@@ -26,10 +26,10 @@
 				</li>
 				<li><a href="report.html"><font color="white">Report</font></a></li>
 				<li><a href="Tos.html"><font color="white">ToS</font></a></li>
-				<li><a href="Tos.html"><font color="white">Contact Us</font></a></li>
+				<li><a href="contact.html"><font color="white">Contact Us</font></a></li>
 			</ul>
 		</nav>
-    <div id="wrap">
+    <div id="wrap" style=height:650px>
 			<h2 align="center">Warning</h2><br>
       <p align="center">This page is strictly prohibited. Staff only!</p><br>
       <p align="center">Please enter 6-digit number for authentication below</p><br>
@@ -38,9 +38,7 @@
         <input type="submit" value="Submit" name="btnSubmit">
       </form>
       <?php
-      $submit=$_POST['btnSubmit'];
-      $pass=$_POST['password'];
-      if(isset($submit)) {
+      if(isset($_POST['btnSubmit'])) {
         while (!$pass=="123456" || $pass="") {
           echo "Access denied";
         }
@@ -48,7 +46,7 @@
       ?>
     </div>
 
-    <!-- below is the footer -->
+		<!-- below is the footer -->
 		<div id="base">
 			<table class="qlink" width=50%>
 				<tr align="left">
@@ -58,19 +56,18 @@
 				</tr>
 				<tr>
 					<td><ul class="sub-link1">
-						<li>Home</li>
-						<li>Normal</li>
-						<li>Premium</li>
-						<li>Payment</li>
+						<li><a href="homepage.html"><font color="white">Home</font></a></li>
+						<li><a href="normalRequest.html"><font color="white">Normal</font></a></li>
+						<li><a href="premiumRequest.html"><font color="white">Premium</font></a></li>
 					</ul></td>
 					<td><ul class="sub-link2">
-						<li>ToS</li>
-						<li>Contact Us</li>
+						<li><a href="Tos.html"><font color="white">ToS</font></a></li>
+						<li><a href="contact.html"><font color="white">Contact Us</font></a></li>
 						<li>About Us</li>
 					</ul></td>
 					<td><ul class="sub-link3">
-						<li><a href="auth.php">OHS only</a></li>
-						<li>Report</li>
+						<li><a href="auth.php"><font color="white">OHS only</font></a></li>
+						<li><a href="report.html"><font color="white">Report</font></a></li>
 					</ul><td>
 				</tr>
 			</table>

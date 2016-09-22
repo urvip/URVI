@@ -26,7 +26,7 @@
 				</li>
 				<li><a href="report.html"><font color="white">Report</font></a></li>
 				<li><a href="Tos.html"><font color="white">ToS</font></a></li>
-				<li><a href="Tos.html"><font color="white">Contact Us</font></a></li>
+				<li><a href="contact.html"><font color="white">Contact Us</font></a></li>
 			</ul>
 		</nav>
 
@@ -68,6 +68,16 @@
 					<input type="e-mail" name="eaddress">
 					</td>
 				</tr>
+				<tr>
+					<td>
+					<label for="address"><font face="Verdana">Address:</font></label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<input type="text" name="address">
+					</td>
+				</tr>
 
 				</table>
 
@@ -85,7 +95,7 @@
 					<td>
 						<select name="pickup">
 							<option> ---------Type---------
-							<option> Deliver
+							<option> Postal
 							<option> E-mail
 							<option> SMS
 						</select>
@@ -108,6 +118,51 @@
 						<input type="text" name="VRinfo">
 					</td>
 				</tr>
+				<tr>
+					<td>
+					<label for="duration"><font face="Verdana">Duration </font></label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<select name="duration">
+							<option> ---------Type---------
+							<option> hourly
+							<option> daily
+							<option> weekly
+							<option> monthly
+							<option> yearly
+						</select>
+					</td>
+				</tr>
+				</table>
+
+				<table>
+						<tr>
+								<td>
+								<label for="start"><font face="Verdana">Start Date </font></label>
+								</td>
+						</tr>
+						<tr>
+								<td>
+									<input type="datetime-local" name="startDate">
+
+								</td>
+						</tr>
+
+						<tr>
+							<td>
+									<label for="end"><font face="Verdana">End Date </font></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+									<input type="datetime-local" name="endDate">
+							</td>
+						</tr>
+
+
+
 				</table>
 
 				<label for="tosaggrement"><font face="Verdana">ToS Agreement : </font></label>
@@ -125,6 +180,7 @@
 		</div>
 
 
+		<!-- below is the footer -->
 		<div id="base">
 			<table class="qlink" width=50%>
 				<tr align="left">
@@ -134,19 +190,18 @@
 				</tr>
 				<tr>
 					<td><ul class="sub-link1">
-						<li>Home</li>
-						<li>Normal</li>
-						<li>Premium</li>
-						<li>Payment</li>
+						<li><a href="homepage.html"><font color="white">Home</font></a></li>
+						<li><a href="normalRequest.html"><font color="white">Normal</font></a></li>
+						<li><a href="premiumRequest.html"><font color="white">Premium</font></a></li>
 					</ul></td>
 					<td><ul class="sub-link2">
-						<li>ToS</li>
-						<li>Contact Us</li>
+						<li><a href="Tos.html"><font color="white">ToS</font></a></li>
+						<li><a href="contact.html"><font color="white">Contact Us</font></a></li>
 						<li>About Us</li>
 					</ul></td>
 					<td><ul class="sub-link3">
-						<li>OHS only</li>
-						<li>Report</li>
+						<li><a href="auth.php"><font color="white">OHS only</font></a></li>
+						<li><a href="report.html"><font color="white">Report</font></a></li>
 					</ul><td>
 				</tr>
 			</table>
@@ -154,9 +209,5 @@
 				<p>&copy; 2016 Copyright. All Rights Reserved</p>
 			</div>
 		</div>
-
-
-
-	</body>
-
+  </body>
 </html>

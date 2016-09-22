@@ -10,6 +10,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+
 $booking=rand(1000000, 9999999);
 $fn=$_POST['firstname'];
 $ln=$_POST['lastname'];
@@ -19,14 +20,18 @@ $option=$_POST['pickup'];
 $vt=$_POST['vtype'];
 $vr=$_POST['VRinfo'];
 $drt=$_POST['duration'];
+$start=$_POST['startDate'];
+$end=$_POST['endDate'];
 
 
-$sql = "INSERT INTO booking (bookingID, bookingType, firstname, lastname, vehicleRego, address, duration, startDate, endDate, email, vehicleType, deliveryOption)
-VALUES ('$booking', 'normal', '$fn', '$ln', '$vr', '$add', '$drt', '2016-Sept-3 17:00:00', '2016-Sept-10 17:00:00', '$email', '$vt', '$option')";
+$sql = "INSERT INTO booking (bookingID, bookingType, firstname, lastname, vehicleRego,
+  address, duration, startDate, endDate, email, vehicleType, deliveryOption)
+VALUES ('$booking', 'normal', '$fn', '$ln', '$vr', '$add', '$drt', '$start', '$end', '$email', '$vt', '$option')";
 
 if (mysqli_query($conn, $sql)) {
-    echo "Your booking number is $booking";
-    echo "<a href='normalRequest.html'>Click here</a>";
+    echo "You have successfully booked a request <br>";
+    echo "Your booking number is $booking<br>";
+    echo "<a href='normalRequest.html'>Click here</a> to go back";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

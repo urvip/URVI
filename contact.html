@@ -30,60 +30,13 @@
 			</ul>
 		</nav>
     <div id="wrap" style=height:650px>
-      <h2 align="center">Report a smoking incident</h2>
-      <hr/><br>
-      <form name="rptParking" align="center" method=POST>
-        <br>Supervisor ID: <input type="text" name="officerID">
-        <br>Violator first name: <input type="text" name="firstname">
-        <br>Violator last name: <input type="text" name="lastname">
-        <br>Department violator belongs to:<br><input type="text" name="happenWhere">
-        <br>Date and Time: <input type="datetime-local" name="dateTime">
-				<br>Description: <textarea name="description" cols=40 rows=1></textarea>
-				<br>Proof: <input type="image" name="proof">
-        <br>
-        <input type="submit" value="Submit" name="btnSubmit">
-        <input type="reset" value="Clear Form" name="btnReset">
-
-      </form>
-			<?php
-			if(isset($_POST['btnSubmit'])) {
-				$servername = "localhost";
-				$username = "root";
-				$password = "";
-				$dbname = "root299";
-
-				// Create connection
-				$conn = mysqli_connect($servername, $username, $password, $dbname);
-				// Check connection
-				if (!$conn) {
-				    die("Connection failed: " . mysqli_connect_error());
-				}
-
-				$citation = rand(10000, 99999);
-				$officer = $_POST['officerID'];
-				$fn = $_POST['firstname'];
-				$ln = $_POST['lastname'];
-				$time= $_POST['dateTime'];
-				$where = $_POST['happenWhere'];
-				$des = $_POST['description'];
-
-				$sql= "INSERT INTO citation (citationID, citationType, officerID,firstname,lastname, amount, incidentTime,
-				  incidentPlace, description)
-				VALUES ('$citation','smoking','$officer','$fn','$ln','250','$time','$where','$des');";
-				//
-				// if (isset($_POST['btnSubmit'], $sql)){
-				//   echo "Your citation ID is $citation";
-				// }
-
-				if (!mysqli_query($conn, $sql)) {
-				    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-				}
-
-				  mysqli_close($conn);
-			}
-
-			?>
-
+			<h2 align="center">Contact Us</h2><br>
+      <h4><b>Head of Parking Department</b></h4><br>
+      <p>Urvi Patel</p><br>
+      <p><b>Email:</b> urvi.patel@parking.atmiya.edu.au</p><br><br>
+      <h4><b>Assistant Manager</b></h4><br>
+      <p>Adrian Wong</p><br>
+      <p><b>Email:</b> adrian.wong@parking.atmiya.edu.au</p><br><br>
     </div>
 
 		<!-- below is the footer -->
