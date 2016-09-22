@@ -38,7 +38,7 @@
 						<p><font color="#0072BB">Reports</font></p>
 					</a></td>
           <td width=45%></td>
-          <td align="center"><a href="reportParking.php">
+          <td align="center"><a href="bookingDisplay.php">
 						<img id="pic2" src="images/parking.png" width=150px height=150px/>
 						<p><font color="#0072BB">Booking requests</font></p>
 					</a></td>

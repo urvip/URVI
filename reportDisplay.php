@@ -30,7 +30,7 @@
 			</ul>
 		</nav>
     <div id="wrap" style=height:650px>
-			<h2 align="center">Welcome to Management Page</h2><br>
+			<h2 align="center">Reports</h2><br>
       <?php
 
         $dblink = mysql_connect("localhost", "root", "");
