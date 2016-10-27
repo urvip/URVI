@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Normal booking - Atmiya College Parking</title>
+		<link rel="stylesheet" type="text/css" href="styles/css.css" />
+        <!--   <script src="javascripts/validation.js"></script>    -->
+	</head>
+    
+
+
+
+	<body><div id="header">
+<div class="logo"><a href="homepage.html"><img alt="" height="60px/" src="images/logo.png" width="60px" />Atmiya<span>College</span> </a></div>
+</div>
+
+        <nav class="navClass">
+    		<ul>
+				<li><a href="homepage.html"><font color="white">Home</font></a></li>
+				<li><a href="normalRequest.html"><font color="white">Normal Request</font></a></li>
+				<li><a href="premiumRequest.html"><font color="white">Premium Request</font></a></li>
+				<li><font color="white">Payment</font>
+					<ul class="sub-menu">
+						<li><a href="paybooking.php"><font color="white">Booking</font></a></li>
+						<li><a href="payfines.php"><font color="white">Fines</font></a></li>
+					</ul>
+				</li>
+				<li><a href="report.html"><font color="white">Report</font></a></li>
+				<li><a href="Tos.html"><font color="white">ToS</font></a></li>
+				<li><a href="contact.html"><font color="white">Contact Us</font></a></li>
+			</ul>
+		</nav>
+
+<div id="wrap" style="background-color: #f1fbfc;">&nbsp;
+<p align="center" style="color: #102629;"><font size="16"><span style="font-family: Ingra;">Normal Request Form</span></font></p>
+
+<link rel="stylesheet" type="text/css" href="styles/formstyle.css" />
+<center>
+<form action="request_exe.php" method="POST" >
+
+<table>
+    			<tr>
+					<td>
+					<label for="firstname"><font face="Verdana">First Name:</font></label>
+					</td>
+					<td>
+					<label for="lastname"><font face="Verdana">Last Name:</font></label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<input type="text" name="firstname" required pattern="[a-z'A-Z'\s]+" aria-required="true" oninput="setCustomValidity('')" oninvalid="setCustomValidity('Please Enter your First Name')"  placeholder="Enter your First Name" >
+					</td>
+					<td>
+					<input type="text" name="lastname" required pattern="[a-z'A-Z'\s]+" aria-required="true" oninput="setCustomValidity('')" oninvalid="setCustomValidity('Please Enter your Last Name')"/ aria-describedby="name-format" placeholder="Enter your Last Name">
+					</td>
+				</tr>
+                <tr>
+    				<td>
+					<label for="eaddress"><font face="Verdana">E-mail Address:</font></label>
+					</td>
+				</tr>
+                <tr>
+    				<td>
+					<input type="e-mail" id="email" name="eaddress" required pattern="[^ @]*@[^ @]*" placeholder="Enter your email" aria-required="true" oninput="setCustomValidity('')" oninvalid="setCustomValidity('Invalid E-mail')">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<label for="address"><font face="Verdana">Address:</font></label>
+					</td>
+				</tr>
+				<tr>
+    				<td colspan="2">
+						<input type="text" name="address"placeholder="Please Enter your Home address Here" required oninput="setCustomValidity('')" oninvalid="setCustomValidity('Please enter your mailing address')" >
+					</td>
+				</tr>
+                <tr>
+    				<td>
+						<label for="pickup"><font face="Verdana">Option to pick up permit:</font></label>
+					</td>
+					<td>
+						<label for="vtype"><font face="Verdana">Vehicle Type: </font></label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<select name="pickup" required >
+							<option value=""> ---------Type---------</option>
+							<option value="postal"> Postal</option>
+							<option value="mail"> E-mail</option>
+							<option value="walkin"> Walk in Pick up</option>
+						</select>
+					</td>
+					<td>
+
+							<input type="radio" name="vtype" value="2wheel" style="color:#00E2FF" required> 2 Wheel
+
+							<input type="radio" name="vtype" value="4wheel" required > 4 Wheel
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<label for="VRinfo"><font face="Verdana">Vehicle Registration Information: </font></label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" name="VRinfo" placeholder="Vehicle Info"required>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<label for="duration"><font face="Verdana">Duration </font></label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<select name="duration" required>
+							<option value="">---------Type---------</option> 
+							<option value="hour"> hourly </option> 
+							<option value="daily"> daily </option> 
+							<option value="weekly"> weekly </option> 
+							<option value="monthly"> monthly </option> 
+							<option value="yearly"> yearly </option>
+						</select>
+					</td>
+				</tr>
+                <tr>
+    							<td>
+								<label for="start"><font face="Verdana">Start Date </font></label>
+								</td>
+						</tr>
+						<tr>
+								<td>
+									<input type="datetime-local" name="startDate" required>
+
+								</td>
+						</tr>
+
+						<tr>
+							<td>
+									<label for="end"><font face="Verdana">End Date </font></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+									<input type="datetime-local" name="endDate" required>
+							</td>
+				</tr>
+                <tr>
+                    <td>
+                    <input type="checkbox" name="tosaggrement"  required  aria-required="true" onclick="setCustomValidity('')" oninvalid="setCustomValidity('You have to agree with the ToS before you proceed your booking')"><font face="Verdana"><strong> I Agree with the</font>  <a href="Tos.html" target="_blank"><font face="Verdana" font color="blue"><u><b>ToS</b></u></font></a></strong>
+                    </td>
+                </tr>
+</table>
+
+
+
+				
+
+					
+				    <div id="lower" style="background-color:#CEFFFB">
+					<input type="submit" value="Submit Request">
+					<input type="reset" value="Clear Form">
+				</div>
+				</form>
+                </center>
+</div>
+<!-- below is the footer -->
+
+<div id="base">
+<table class="qlink" style="width: 50%;">
+	<tbody>
+		<tr align="left">
+			<th>Quick Links</th>
+			<th>Supports</th>
+			<th>Staff</th>
+		</tr>
+		<tr>
+			<td>
+			<ul class="sub-link1">
+				<li><a href="homepage.html"><span style="color: white;">Home</span></a></li>
+				<li><a href="normalRequest.html"><span style="color: white;">Normal</span></a></li>
+				<li><a href="premiumRequest.html"><span style="color: white;">Premium</span></a></li>
+			</ul>
+			</td>
+			<td>
+			<ul class="sub-link2">
+				<li><a href="Tos.html"><span style="color: white;">ToS</span></a></li>
+				<li><a href="contact.html"><span style="color: white;">Contact Us</span></a></li>
+				<li>About Us</li>
+			</ul>
+			</td>
+			<td>
+			<ul class="sub-link3">
+				<li><a href="auth.php"><span style="color: white;">OHS</span></a></li>
+				<li><a href="report.html"><span style="color: white;">Report</span></a></li>
+			</ul>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="cpright">
+<p>&copy; 2016 Copyright. All Rights Reserved</p>
+</div>
+</div>
+</body>
+</html>
+			
